@@ -1,7 +1,7 @@
-body{
+/* body{
   background-color:navy;
   background-size: cover;
-  color: black;
+  color:white;
 }
 .level{
 color: black;
@@ -15,9 +15,6 @@ height:400px;
 border:2.5px solid #000;
 padding:20px; 
 margin:20px; 
-/* display:flex;
-justify-content: center;
-align-items: center; */
 box-shadow: 0 0 10px rgba(0,0,0,0.2);  background-size: 20px 20px;
 background-color: rgb(39, 158, 238);
 border-radius: 20px;
@@ -44,4 +41,30 @@ margin-left: 20%;
   margin-left: 45%;
   border-radius: 10px;
   padding: 10px;
+} */
+.count{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 37%;
+  left: 48%;
+  position: absolute;
+}
+.button{
+  display: table;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 20%;
+  padding: 10px;
+  font-size: large;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: plum;
+  border-style:dotted;
+  border-color: blueviolet;
+  position:absolute;
+  top: 50%;
+  left: 41%;
+
 }
