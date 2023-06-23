@@ -1,8 +1,8 @@
-/* body{
+/* /* body{
   background-color:navy;
   background-size: cover;
   color:white;
-}
+} */
 .level{
 color: black;
 display: flex;
@@ -19,7 +19,6 @@ box-shadow: 0 0 10px rgba(0,0,0,0.2);  background-size: 20px 20px;
 background-color: rgb(39, 158, 238);
 border-radius: 20px;
 margin-top: 7%;
-margin-left: 20%;
 }
 
 .number {
@@ -30,7 +29,6 @@ margin-left: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 45%;
   border-radius: 10px;
   padding: 10px;
 }
@@ -38,7 +36,6 @@ margin-left: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 45%;
   border-radius: 10px;
   padding: 10px;
 } */

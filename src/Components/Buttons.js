@@ -17,12 +17,11 @@ return(
 <><div className="box">
 <div>
 <h1 className="level"> This is level:{level}</h1></div>
-<div> <br></br>
-<br></br>
+<div> 
+
 <h1 className="number">This is number:{counter} </h1></div>
 <div>
-<br></br>
-<br></br>
+
 <button  className="btn1" onClick={()=> setcounter(counter +1)}>Increment</button>
 <br></br>
 <button  className="btn2" onClick={()=> setcounter(counter -1)}>Decrement</button>
