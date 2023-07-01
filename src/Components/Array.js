@@ -10,9 +10,9 @@ const [name, setname]=useState([
     "janhvi",
     "kajal"
 ]);
-const deleteName= ()=>{
-    setname(delete name[2]);
-}
+// const deleteName= ()=>{
+//     setname(delete name[2]);
+// }
 const suffle =()=>{
     if (toggle){
         setname(["Srijal", "Priya", "Arya", "Harsh", "Anish"])
@@ -42,25 +42,14 @@ const addElement=()=>{
 };
 const removeElement = ()=>{
     let oldName= [...name];
-    oldName.pop();
-    oldName.pop("Anjali");
+    // oldName.pop();
+    // oldName.pop("Anjali");
+    oldName.pop("Srijal");
     setname(oldName);
 };
-// const addAll = ()=>([
-//     "Srijal",
-//     "Arya",
-//     "Priya",
-//     "Harsh",
-//     "Anish",
-//     "janhvi",
-//     "kajal",
-//     "Sejal",
-//     "Anjali"
-// ])
-// setname(addAll);
 return(
     <>
-        <p>
+        {/* <p>
             This is list of names:
         </p>
         <ol>
@@ -73,9 +62,20 @@ return(
             <li>{name[6]}</li>
             <li>{name[7]}</li>
             <li>{name[8]}</li>
-        </ol>
-        <button onClick={()=>deleteName()} type="button"> Delete </button>
-        <br></br>
+        </ol> */}
+
+        {/* here is the way of array mapping  */}
+
+    <p> This is name of my friends: </p>
+    <ul>
+        {name.map((v)=>{
+            return(
+                <>
+                <li>{v}</li>
+                </>
+            );
+        })}
+    </ul>
         <button onClick={()=>suffle()} type="button"> Suffle </button>
         <br></br>
         <button onClick={()=>empty()} type="button"> Empty </button>
@@ -83,8 +83,7 @@ return(
         <button onClick={()=>addElement()} type="button"> Add </button>
         <br></br>
         <button onClick={()=>removeElement()} type="button"> Remove  </button>
-        <br></br>
-        {/* <button onClick={()=>addAll()} type="button"> Add All </button> */}
+        <br></br>  
     </>
 )
 }

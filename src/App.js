@@ -5,7 +5,8 @@ import './App.css';
 // import Object from './Components/Object';
 // import Object2 from './Components/Object2';
 // import Conditionalrendering from './Components/Conditionalrendering';
-import Array from './Components/Array';
+// import Array from './Components/Array';
+import ArrayOfObject from './Components/ArrayOfObject'
 const App= ()=> {
   return (
   <>
@@ -15,7 +16,8 @@ const App= ()=> {
 {/* <Object/> */}
 {/* <Object2/> */}
 {/* <Conditionalrendering/> */}
-<Array/>
+{/* <Array/> */}
+<ArrayOfObject/>
   </>
   );
 };
