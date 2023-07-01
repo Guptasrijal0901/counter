@@ -13,7 +13,7 @@ const Object= ()=>{
     return (
         <>
             <h1>
-                Hello my name is {bio.name}, I study in {bio.college},
+                Hello My Name is {bio.name}, I study in {bio.college},
                 in branch {bio.branch} and my batch is { bio.batch}.
             </h1>
         </>

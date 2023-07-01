@@ -4,8 +4,8 @@ import './App.css';
 // import Time from './Components/Time';
 // import Object from './Components/Object';
 // import Object2 from './Components/Object2';
-import Conditionalrendering from './Components/Conditionalrendering';
-
+// import Conditionalrendering from './Components/Conditionalrendering';
+import Array from './Components/Array';
 const App= ()=> {
   return (
   <>
@@ -14,7 +14,8 @@ const App= ()=> {
 {/* < Time/> */}
 {/* <Object/> */}
 {/* <Object2/> */}
-<Conditionalrendering/>
+{/* <Conditionalrendering/> */}
+<Array/>
   </>
   );
 };

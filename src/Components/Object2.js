@@ -30,7 +30,7 @@ const Body =()=>{
         }
     };
         const handleupdatebranch=()=>{
-            if (bio.branch=== "ECE"){
+            if (bio.branch === "ECE"){
                 const updatedObject = {...bio};
                 updatedObject.branch= "MECHANICAL";
                 setbio(updatedObject);
