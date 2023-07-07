@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 const Object=()=>{
     const [student, setstudent]= useState([
         {Name: "Srijal", Branch: "ECE", Relation: "Friends"},
@@ -12,48 +12,56 @@ const Object=()=>{
         {Name: "Anish", Branch: "CS", Relation: "Friends"},
         {Name: "Harsh", Branch: "BCA", Relation: "Best Friends"},
     ])
+    // add student 
     const handleAdd=()=>{
         const newStudent=[...student]
         newStudent.push({Name: "Ashutosh", Branch: "ECE", Relation: "Friends"});
         setstudent(newStudent);
-    }
-    const deleteItem = ()=>{
-        let oldArray= [...student]
-        let newStudent= oldArray.filter((v , i)=> v.Name !== i )
+    };
+    // remove 
+    const deleteItem = (c, i)=>{
+        const oldArray= [...student];
+        const newStudent= oldArray.filter((a , i)=> a !== c);
         setstudent(newStudent);
-    }
-    const updateItem = (v)=>{
-        let oldArray= [...student]
-        let newStudent= [];
-        for (let i=0; i<oldArray.length; i++)
-        {
-        if (oldArray[i] === v){
-            oldArray[i]="Friends";
+    };
+    const updateItem = (c,i)=>{
+        const oldArray= [...student];
+        // const newStudent= [];
+        for (let i=0; i<oldArray.length; i++){
+        if (oldArray[i] === c){
+            c.Relation="College Friend";
         }}
-        setstudent(newStudent);
+        setstudent(oldArray);
+    };
+    const updateAll=()=>{
+    const oldArray= [...student];
+    for (let b of oldArray){
+        b.Relation="College Friends"
+    }
+    setstudent(oldArray);
     }
     return(
         <>
 <h1>
     This is name of my friends:
 </h1>
-{student.map((v)=>{
+{student.map((c,i)=>{
     return(
         <>
             <ol>
-            <li>Name: {v.Name}</li>
-            <li>Branch: {v.Branch}</li>
-            <li>Relation: {v.Relation}</li>
-            <button type="button" onClick={()=>deleteItem()}>Delete Me</button>
+            <li>Name: {c.Name}</li>
+            <li>Branch: {c.Branch}</li>
+            <li>Relation: {c.Relation}</li>
+            <button type="button" onClick={()=>deleteItem(c, i)}>Delete Me</button>
             <br></br>
-            <button type="button" onClick={()=> updateItem()}>Update Me</button>
+            <button type="button" onClick={()=> updateItem(c, i)}>Update Me</button>
             </ol>
             </>
-
     )
 })}
 <br></br>
 <button type="button" onClick={()=>handleAdd()}> Add </button>
+<button type="button" onClick={()=>updateAll()}>Update Me</button>
         </>
     )
 }
