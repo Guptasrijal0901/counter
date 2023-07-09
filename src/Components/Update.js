@@ -1,7 +1,7 @@
 import { useState } from "react";
 const Object=()=>{
     const [student, setstudent]= useState([
-        {Name: "Srijal", Branch: "ECE", Relation: "Friends"},
+        {Name: "Srijal", Branch: "ECE", Relation: "Myself"},
         {Name: "Ratan", Branch: "CH", Relation: "Friends"},
         {Name: "Megha", Branch: "ECE", Relation: "Friends"},
         {Name: "Astha", Branch: "ECE", Relation: "Friends"},
@@ -24,9 +24,9 @@ const Object=()=>{
         const newStudent= oldArray.filter((a , i)=> a !== c);
         setstudent(newStudent);
     };
+    //update
     const updateItem = (c,i)=>{
         const oldArray= [...student];
-        // const newStudent= [];
         for (let i=0; i<oldArray.length; i++){
         if (oldArray[i] === c){
             c.Relation="College Friend";
